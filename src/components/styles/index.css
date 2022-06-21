@@ -1,19 +1,35 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: gillSans;
+  src: url(./fonts/Gill/Gill\ Sans.otf);
+  font-weight: bold;
+}
+
+:root {
+  --primary-blue: #4268B1;
+  --secondary-blue: #3B5A9A;
+  --primary-font: 'Lato', sans-serif;
+  /* --secondary-font: 'Gill Sans', sans-serif; */
+  --secondary-font: gillSans;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  font-size: 10px;
+}
+
+body {
+  background: var(--secondary-blue);
+  color: #fff;
 }
 
 code {

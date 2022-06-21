@@ -1,0 +1,54 @@
+.showcaseDiv {
+  display: flex;
+  background: var(--primary-blue);
+  gap: 4rem;
+}
+
+/* .showcaseDiv::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #3B5A9A;
+  opacity: 0.6;
+} */
+
+.showcaseImg {
+  width: 40%;
+  height: 10%;
+}
+
+.showcaseImg img {
+  width: 100%;
+  height: 10%;
+}
+
+.showcaseDetails {
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.showcaseDetails p {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.showcaseDetails span {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.heading {
+  padding: 0.5rem;
+  font-weight: 500;
+}
+
+.leaguesDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

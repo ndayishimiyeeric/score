@@ -1,0 +1,75 @@
+.sport {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.5rem;
+  padding: 0;
+  font-size: 1rem;
+  background: var(--primary-blue);
+  position: relative;
+}
+
+.sport:nth-child(4n + 2) {
+  background: var(--secondary-blue);
+}
+
+.sport:nth-child(4n + 3) {
+  background: var(--secondary-blue);
+}
+
+.sport::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background:var(--secondary-blue);
+  opacity: 0.3;
+  z-index: 10;
+}
+
+.image {
+  max-width: 100%;
+  position: relative;
+}
+
+.image img {
+  width: 60%;
+}
+
+.content {
+  z-index: 20;
+  height: auto;
+  align-items: flex-end;
+  padding-right: 1rem;
+  padding-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.openIcon {
+  font-size: 2rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 30;
+}
+
+.title {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 1.9rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.numberGroup {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.link {
+  color: #fff;
+}
