@@ -56,6 +56,11 @@ npm start
 - Twitter: [@odaltongain](https://twitter.com/odaltongain)
 - LinkedIn: [Ndayishimiye Eric](https://linkedin.com/in/nderic)
 
+## Credits
+
+- The original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
+- Project from [Microverse](https://bit.ly/MicroverseTN) React-Redux module
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
