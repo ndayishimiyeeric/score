@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <Routes>
         <Route path="/" element={<Sports />} />
         <Route path="/detail" element={<Details />} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Sport from './Sport';
 import Header from './Header';
+import Footer from './Footer';
 import styles from './styles/Leagues.module.css';
 
 const Sports = () => {
@@ -40,6 +41,7 @@ const Sports = () => {
           { sportElements }
         </div>
       </div>
+      <Footer />
     </>
   );
 };

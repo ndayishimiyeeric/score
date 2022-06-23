@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BiRightArrowCircle } from 'react-icons/bi';
-import { getDetails } from '../redux/detailSlice/detailSlice';
+import { updateIndex } from '../redux/detailSlice/detailSlice';
 import styles from './styles/League.module.css';
 
 const Sport = (props) => {
@@ -12,8 +12,9 @@ const Sport = (props) => {
   } = props;
 
   const dispatch = useDispatch();
-  const handleIconClick = ({ id }) => {
-    dispatch(getDetails({ id }));
+  const handleIconClick = (id) => {
+    dispatch(updateIndex(id));
+    localStorage.setItem('sport', JSON.stringify(id));
   };
 
   const num = games.length;
@@ -24,7 +25,7 @@ const Sport = (props) => {
         <Link to="/detail" className={styles.link}>
           <BiRightArrowCircle
             className={styles.openIcon}
-            onClick={() => handleIconClick({ id })}
+            onClick={() => handleIconClick(id)}
           />
         </Link>
       </div>
