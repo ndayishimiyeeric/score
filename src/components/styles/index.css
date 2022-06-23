@@ -23,7 +23,7 @@
   --primary-font: 'Lato', sans-serif;
   --secondary-font: gillsans;
   --danger-font: gillsansheavy;
-  --light-font: gillSansLight;
+  --light-font: gillsanslight;
   --p-x-y: 2rem;
   --p-y: 1rem 2rem;
 }
@@ -36,7 +36,6 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: var(--secondary-font);
   font-weight: 500;
   font-size: 10px;
   font-family: 'Gill Sans', sans-serif;
