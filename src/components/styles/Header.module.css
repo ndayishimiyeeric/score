@@ -2,7 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6rem;
+  padding: var(--p-y);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: var(--danger-blue);
+  z-index: 60;
 }
 
 .arrowBack {
@@ -19,9 +25,23 @@
 }
 
 .sideIcon {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .link {
-  color: #fff;
+  color: var(--primary-white);
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 0 6rem 0 6rem;
+  }
+
+  .arrowBack {
+    font-size: 4rem;
+  }
+
+  .sideIcon {
+    font-size: 3rem;
+  }
 }

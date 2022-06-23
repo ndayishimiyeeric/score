@@ -2,18 +2,8 @@
   display: flex;
   background: var(--primary-blue);
   gap: 4rem;
+  margin-top: 3.5rem;
 }
-
-/* .showcaseDiv::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #3B5A9A;
-  opacity: 0.6;
-} */
 
 .showcaseImg {
   width: 40%;
@@ -36,6 +26,7 @@
 .showcaseDetails p {
   font-size: 2.25rem;
   font-weight: 700;
+  font-family: var(--danger-font);
 }
 
 .showcaseDetails span {
@@ -44,11 +35,30 @@
 }
 
 .heading {
-  padding: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
 .leaguesDiv {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.mainDiv {
+  margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .leaguesDiv {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .showcaseDiv {
+    gap: 6rem;
+  }
+
+  .showcaseDetails p {
+    font-size: 4rem;
+  }
 }

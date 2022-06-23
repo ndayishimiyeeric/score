@@ -3,15 +3,29 @@
 @font-face {
   font-family: gillSans;
   src: url(./fonts/Gill/Gill\ Sans.otf);
-  font-weight: bold;
+}
+
+@font-face {
+  font-family: gillSansHeavy;
+  src: url(./fonts/Gill/Gill\ Sans\ Heavy.otf);
+}
+
+@font-face {
+  font-family: gillSansLight;
+  src: url(./fonts/Gill/Gill\ Sans\ Light.otf);
 }
 
 :root {
-  --primary-blue: #4268B1;
-  --secondary-blue: #3B5A9A;
+  --primary-white: #fff9ff;
+  --primary-blue: #4369b2;
+  --secondary-blue: #5788e5;
+  --danger-blue: #35548b;
   --primary-font: 'Lato', sans-serif;
-  /* --secondary-font: 'Gill Sans', sans-serif; */
-  --secondary-font: gillSans;
+  --secondary-font: gillsans;
+  --danger-font: gillsansheavy;
+  --light-font: gillSansLight;
+  --p-x-y: 2rem;
+  --p-y: 1rem 2rem;
 }
 
 html {
@@ -27,17 +41,17 @@ html {
   font-size: 10px;
 }
 
-body {
-  background: var(--secondary-blue);
-  color: #fff;
+ul {
+  list-style: none;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+body {
+  background: var(--danger-blue);
+  color: var(--primary-white);
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 6rem 0 6rem;
+  }
 }

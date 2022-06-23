@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   padding-right: 0.5rem;
-  padding: 0;
   font-size: 1rem;
   background: var(--primary-blue);
   position: relative;
@@ -23,7 +22,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background:var(--secondary-blue);
+  background: var(--secondary-blue);
   opacity: 0.3;
   z-index: 10;
 }
@@ -58,7 +57,7 @@
 }
 
 .title {
-  font-family: var(--primary-font);
+  font-family: var(--danger-font);
   font-weight: 500;
   font-size: 1.9rem;
   word-wrap: break-word;
@@ -71,5 +70,23 @@
 }
 
 .link {
-  color: #fff;
+  color: var(--primary-white);
+}
+
+@media only screen and (min-width: 768px) {
+  .sport:nth-child(4n + 2) {
+    background: var(--secondary-blue);
+  }
+
+  .sport:nth-child(4n + 3) {
+    background: var(--primary-blue);
+  }
+
+  .sport:nth-child(4n + 4) {
+    background: var(--secondary-blue);
+  }
+
+  .openIcon {
+    font-size: 3rem;
+  }
 }
