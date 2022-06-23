@@ -1,27 +1,57 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+  font-family: gillSans;
+  src: url(./fonts/Gill/Gill\ Sans.otf);
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+@font-face {
+  font-family: gillSansHeavy;
+  src: url(./fonts/Gill/Gill\ Sans\ Heavy.otf);
+}
+
+@font-face {
+  font-family: gillSansLight;
+  src: url(./fonts/Gill/Gill\ Sans\ Light.otf);
+}
+
+:root {
+  --primary-white: #fff9ff;
+  --primary-blue: #4369b2;
+  --secondary-blue: #5788e5;
+  --danger-blue: #35548b;
+  --primary-font: 'Lato', sans-serif;
+  --secondary-font: gillsans;
+  --danger-font: gillsansheavy;
+  --light-font: gillsanslight;
+  --p-x-y: 2rem;
+  --p-y: 1rem 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 10px;
+  font-family: 'Gill Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background: var(--danger-blue);
+  color: var(--primary-white);
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 0 6rem 0 6rem;
+  }
 }

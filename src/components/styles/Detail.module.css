@@ -1,0 +1,149 @@
+.showcaseDiv {
+  display: flex;
+  background: var(--primary-blue);
+  gap: 4rem;
+  margin-top: 3.5rem;
+}
+
+.showcaseImg {
+  width: 40%;
+  height: 10%;
+}
+
+.showcaseImg img {
+  width: 100%;
+  height: 10%;
+}
+
+.showcaseDetails {
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+}
+
+.showcaseDetails p {
+  font-size: 2.25rem;
+  font-family: var(--danger-font);
+}
+
+.showcaseDetails span {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.heading {
+  padding: 1rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.description {
+  padding: var(--p-x-y);
+  background: var(--primary-blue);
+}
+
+.description span {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.description p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  font-family: var(--primary-font);
+}
+
+.tagsDiv {
+  padding: var(--p-x-y);
+}
+
+.tagsDiv p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.tagsDiv span {
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-family: var(--primary-font);
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 1rem;
+  border: 1px solid var(--primary-blue);
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.tag:hover {
+  transform: scale(1.03);
+}
+
+.relatedDiv {
+  padding: var(--p-x-y);
+  background: var(--primary-blue);
+  margin-bottom: 5rem;
+}
+
+.relatedTitle {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.relatedNot {
+  font-size: 1.5rem;
+  font-family: var(--light-font);
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.relatedCard {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--secondary-blue);
+  border-radius: 0.5rem;
+}
+
+.relatedCard img {
+  width: 50%;
+}
+
+.related p {
+  font-size: 2rem;
+  font-family: var(--light-font);
+}
+
+.description,
+.showcaseDiv,
+.relatedDiv {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .description,
+  .showcaseDiv,
+  .relatedDiv {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .tags {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

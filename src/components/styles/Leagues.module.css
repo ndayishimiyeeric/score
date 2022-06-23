@@ -1,0 +1,93 @@
+.showcaseDiv {
+  display: flex;
+  background: var(--primary-blue);
+  gap: 4rem;
+  margin-top: 3.5rem;
+}
+
+.showcaseImg {
+  width: 40%;
+  height: 10%;
+}
+
+.showcaseImg img {
+  width: 100%;
+  height: 10%;
+}
+
+.showcaseDetails {
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+.showcaseDetails p {
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: var(--danger-font);
+}
+
+.showcaseDetails span {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.heading {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.leaguesDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mainDiv {
+  margin-bottom: 4rem;
+}
+
+form {
+  padding: 1rem;
+}
+
+.formInput {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: var(--primary-white);
+  color: var(--danger-blue);
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.formInput::placeholder {
+  color: var(--danger-blue);
+  font-style: italic;
+}
+
+.missing {
+  padding: var(--p-y);
+}
+
+.missing p {
+  font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .leaguesDiv {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .showcaseDiv {
+    gap: 6rem;
+  }
+
+  .showcaseDetails p {
+    font-size: 4rem;
+  }
+}
