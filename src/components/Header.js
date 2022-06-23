@@ -10,9 +10,12 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.link}>
-        <MdKeyboardArrowLeft
-          className={styles.arrowBack}
-        />
+        {window.location.pathname !== '/'
+          && (
+            <MdKeyboardArrowLeft
+              className={styles.arrowBack}
+            />
+          )}
       </Link>
       <p className={styles.headerHeading}>{heading}</p>
       <div className={styles.headerSide}>

@@ -19,7 +19,6 @@ const Details = () => {
   const { index, details } = useSelector((state) => state.detail);
   const newIndex = index !== null ? index : localIndex;
 
-  // const sports = useSelector((state) => state.sports);
   const sportDetail = details.filter((sport) => sport.id === newIndex);
 
   const num = sportDetail[0].relationships.tags.data.length;
