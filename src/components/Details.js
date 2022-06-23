@@ -16,11 +16,11 @@ const Details = () => {
     }
   }, []);
 
-  const { index } = useSelector((state) => state.detail);
+  const { index, details } = useSelector((state) => state.detail);
   const newIndex = index !== null ? index : localIndex;
 
-  const sports = useSelector((state) => state.sports);
-  const sportDetail = sports.filter((sport) => sport.id === newIndex);
+  // const sports = useSelector((state) => state.sports);
+  const sportDetail = details.filter((sport) => sport.id === newIndex);
 
   const num = sportDetail[0].relationships.tags.data.length;
   const tags = sportDetail[0].relationships.tags.data;
@@ -36,7 +36,7 @@ const Details = () => {
   const { related } = sportDetail[0].relationships;
   const relatedSports = [];
   for (let i = 0; i < related.length; i += 1) {
-    sports.forEach((sport) => {
+    details.forEach((sport) => {
       if (sport.id === related[i].data.id) {
         relatedSports.push(sport);
       }

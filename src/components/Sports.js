@@ -1,24 +1,57 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateSearchItem } from '../redux/detailSlice/detailSlice';
 import Sport from './Sport';
 import Header from './Header';
 import Footer from './Footer';
 import styles from './styles/Leagues.module.css';
 
 const Sports = () => {
+  const [formData, setFormData] = useState({
+    textValue: '',
+  });
+
+  const handleChange = (event) => {
+    const {
+      value, name, type, checked,
+    } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
+
+  const dispatch = useDispatch();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (formData.textValue.trim()) {
+      dispatch(updateSearchItem(formData.textValue));
+      setFormData((prevState) => ({
+        ...prevState,
+        textValue: '',
+      }));
+    }
+  };
+
   const sports = useSelector((state) => state.sports);
-  const sportElements = sports.map((sport) => (
-    sport.attributes.icon !== null && (
+  const changer = (str) => str.toString().split('').join('').toUpperCase()
+    .replace(/\s/g, '');
+  const NewsportElements = sports.filter((item) => changer(item.name)
+    .includes(changer(formData.textValue)));
+
+  const sportElements = NewsportElements.map((sport) => (
+    (
       <Sport
-        key={sport.attributes.decathlon_id}
-        id={sport.attributes.decathlon_id}
-        img={sport.attributes.icon}
-        title={sport.attributes.name}
-        games={sport.relationships.tags.data}
+        key={sport.id}
+        id={sport.id}
+        img={sport.icon}
+        title={sport.name}
+        games={sport.tags}
       />
     )
   ));
-  const sportsAvailable = sports.filter((sport) => sport.attributes.icon !== null);
+  const sportsAvailable = sports.filter((sport) => sport.icon !== null);
+
   return (
     <>
       <Header heading="Sports" />
@@ -37,9 +70,23 @@ const Sports = () => {
           </div>
         </div>
         <p className={styles.heading}>SPORTS BY GROUP</p>
-        <div className={styles.leaguesDiv}>
-          { sportElements }
-        </div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Search..."
+            onChange={handleChange}
+            name="textValue"
+            value={formData.textValue}
+            className={styles.formInput}
+          />
+        </form>
+        { NewsportElements.length > 0
+          ? (
+            <div className={styles.leaguesDiv}>
+              {sportElements}
+            </div>
+          )
+          : <div className={styles.missing}><p>No such game available</p></div> }
       </div>
       <Footer />
     </>

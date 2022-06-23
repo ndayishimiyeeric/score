@@ -49,6 +49,35 @@
   margin-bottom: 4rem;
 }
 
+form {
+  padding: 1rem;
+}
+
+.formInput {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: var(--primary-white);
+  color: var(--danger-blue);
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.formInput::placeholder {
+  color: var(--danger-blue);
+  font-style: italic;
+}
+
+.missing {
+  padding: var(--p-y);
+}
+
+.missing p {
+  font-size: 1.6rem;
+}
+
 @media only screen and (min-width: 768px) {
   .leaguesDiv {
     grid-template-columns: repeat(3, 1fr);
