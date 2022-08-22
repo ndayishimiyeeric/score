@@ -11,13 +11,12 @@ function App() {
   useEffect(() => {
     dispatch(getData());
     dispatch(getDetails());
-  }, []);
-
+  });
   return (
     <div className="container">
       <Routes>
         <Route path="/" element={<Sports />} />
-        <Route path="/detail" element={<Details />} />
+        <Route path="/detail/:id" element={<Details />} />
       </Routes>
     </div>
   );
